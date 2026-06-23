@@ -1,0 +1,22 @@
+.env
+.env.*
+*.env
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+*.swo
+*~
+.cache/
+
+# cloned repos (not dotfiles)
+mangowm/
+mangofiles/
+qylock/
+yay/
+
+# loose root files (backup copies, not part of rice config)
+sddm.conf
+vxwm-lock
+vxwm.desktop
+session-ses_15ff.md

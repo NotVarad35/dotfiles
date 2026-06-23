@@ -1,0 +1,52 @@
+# Apps installed for the rice project (June 2026)
+# Backed up alongside SDDM config for future reference.
+
+## Display Manager
+- sddm (with pixel-dusk-city & pixel-rainyroom themes)
+
+## Window Managers / Compositors
+- vxwm (X11, dwm fork) — custom built from codeberg
+- mangowm / mango (Wayland compositor) — custom built from github
+
+## Browser
+- firefox
+
+## Development
+- code (VS Code)
+- jdk-openjdk
+- python + packages (requests, click, tqdm, etc.)
+- lazygit
+- git
+- curl
+
+## Terminal & Shell
+- kitty
+
+## System Tools
+- fastfetch
+- picom (compositor)
+- polybar (status bar)
+- rofi (app launcher)
+- xclip (clipboard)
+- yt-dlp
+- cava (audio visualizer)
+- xscreensaver
+
+## Apps / Utilities
+- ark (archiver)
+- flatpak
+- flameshot (screenshot)
+- kdeconnect
+- obs-studio
+- vlc
+- wine
+- xfce4-settings
+
+## Fonts
+- ttf-jetbrains-mono
+- Monocraft (manual install in ~/.local/share/fonts/)
+
+## Custom Scripts
+- /usr/local/bin/vxwm-lock (SDDM lock with random theme)
+- /usr/local/bin/vxwm-powermenu (rofi power menu)
+- /etc/sudoers.d/vxwm-lock (NOPASSWD for lock commands)
