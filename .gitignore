@@ -14,6 +14,7 @@ mangowm/
 mangofiles/
 qylock/
 yay/
+reference/
 
 # loose root files (backup copies, not part of rice config)
 sddm.conf
