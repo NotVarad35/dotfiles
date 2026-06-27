@@ -1,25 +1,19 @@
 import QtQuick
 import Quickshell
-import Quickshell.Wayland
 import qs.theme
 
-PanelWindow {
+PopupWindow {
     id: root
 
-    implicitWidth: 700
-    implicitHeight: 480
+    required property var parentWindow
+    implicitWidth: 380
+    implicitHeight: 460
     color: "transparent"
 
-    anchors.top: true
-    margins {
-        top: 70
-        right: 16
-    }
-
-    WlrLayershell.namespace: "calendar_widget"
-    WlrLayershell.layer: WlrLayer.Top
-    WlrLayershell.exclusionMode: ExclusionMode.Ignore
-    WlrLayershell.keyboardFocus: WlrKeyboardFocus.OnDemand
+    grabFocus: true
+    anchor.window: parentWindow
+    anchor.rect.x: (parentWindow.width - width) / 2
+    anchor.rect.y: parentWindow.implicitHeight + 8
 
     Rectangle {
         anchors.fill: parent
@@ -30,10 +24,8 @@ PanelWindow {
         border.width: 1
 
         CalendarGrid {
-            anchors.fill: parent
-
+            anchors { fill: parent; topMargin: 20; leftMargin: 24; rightMargin: 24; bottomMargin: 20 }
             isWindowVisible: root.visible
-
             onRequestClose: root.visible = false
         }
     }
