@@ -120,7 +120,7 @@
 - ☐ Wine (Cosmic Byte Firestorm mouse software)
 
 ### Productivity
-- ☐ Obsidian (notes)
+- ✅ Obsidian (notes) — AppImage at ~/.local/bin/obsidian.AppImage, .desktop entry added, launches via app launcher
 - ☐ yt-dlp GUI with multi-link paste
 - ☐ Kitty terminal (personal config)
 - ☐ Flatpak GUI
