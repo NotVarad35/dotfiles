@@ -6,13 +6,13 @@ PopupWindow {
     id: root
 
     required property var parentWindow
-    implicitWidth: 380
-    implicitHeight: 460
+    implicitWidth: 700
+    implicitHeight: 480
     color: "transparent"
 
     grabFocus: true
     anchor.window: parentWindow
-    anchor.rect.x: (parentWindow.width - width) / 2
+    anchor.rect.x: 15
     anchor.rect.y: parentWindow.implicitHeight + 8
 
     Rectangle {
@@ -24,7 +24,7 @@ PopupWindow {
         border.width: 1
 
         CalendarGrid {
-            anchors { fill: parent; topMargin: 20; leftMargin: 24; rightMargin: 24; bottomMargin: 20 }
+            anchors.fill: parent
             isWindowVisible: root.visible
             onRequestClose: root.visible = false
         }

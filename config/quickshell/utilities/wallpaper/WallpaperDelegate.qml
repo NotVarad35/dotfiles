@@ -106,7 +106,7 @@ Item {
                     Text {
                         anchors.horizontalCenter: parent.horizontalCenter
                         text: delegateRoot.hasFailed ? "Failed to generate thumbnail :(" : "Generating Thumbnail"
-                        color: delegateRoot.hasFailed ? Theme.error : Theme.on_surface_variant
+                        color: delegateRoot.hasFailed ? Theme.critical : Theme.on_surface_variant
                         font.family: "Google Sans Medium"
                         font.pixelSize: 14
                         horizontalAlignment: Text.AlignHCenter

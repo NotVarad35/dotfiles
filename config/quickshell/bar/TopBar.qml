@@ -37,7 +37,12 @@ Variants {
         }
         Calendar {
             id: calendarModule
-            anchors.centerIn: parent
+            parentWindow: mainBar
+            anchors {
+                left: statusModule.right
+                leftMargin: 8
+                verticalCenter: parent.verticalCenter
+            }
         }
         Workspaces {
             id: workspaceModule
