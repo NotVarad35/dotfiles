@@ -43,7 +43,7 @@ Item {
                 pixelSize: 28
             }
 
-            renderType: Text.NativeRendering
+            renderType: Text.QtRendering
         }
 
         MouseArea {

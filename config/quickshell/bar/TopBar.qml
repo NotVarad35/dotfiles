@@ -29,6 +29,7 @@ Variants {
         // --- Core Modules ---
         SystemStats {
             id: statusModule
+            parentWindow: mainBar
             anchors {
                 left: parent.left
                 leftMargin: 15

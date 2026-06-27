@@ -184,7 +184,7 @@ PanelWindow {
                 MultiEffect {
                     anchors.fill: shadowCaster
                     source: shadowCaster
-                    shadowEnabled: true
+                    shadowEnabled: false
                     shadowBlur: 1.5
                     shadowColor: "#60000000"
                     shadowVerticalOffset: 16
@@ -292,7 +292,7 @@ PanelWindow {
 
                         layer.enabled: true
                         layer.effect: MultiEffect {
-                            shadowEnabled: true
+                            shadowEnabled: false
                             shadowBlur: 1.0
                             shadowColor: "#40000000"
                             shadowVerticalOffset: 4

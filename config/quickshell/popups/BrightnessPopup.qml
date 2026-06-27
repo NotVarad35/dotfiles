@@ -108,7 +108,7 @@ Variants {
 
                 layer.enabled: true
                 layer.effect: MultiEffect {
-                    shadowEnabled: true
+                    shadowEnabled: false
                     shadowBlur: 1.0
                     shadowColor: "#40000000"
                     shadowVerticalOffset: 6

@@ -94,7 +94,7 @@ PanelWindow {
                 MultiEffect {
                     anchors.fill: shadowCaster
                     source: shadowCaster
-                    shadowEnabled: true
+                    shadowEnabled: false
                     shadowBlur: 1.0
                     shadowColor: "#60000000"
                     shadowVerticalOffset: 12
@@ -525,6 +525,7 @@ PanelWindow {
                                         family: "Noto Color Emoji"
                                         pixelSize: 18
                                     }
+                                    renderType: Text.QtRendering
                                 }
                                 Text {
                                     text: ctrl.selectionBuffer !== "" ? ("+ " + (ctrl.currentEmojiName || "")) : (ctrl.currentEmojiName || "Select an emoji")
@@ -558,9 +559,10 @@ PanelWindow {
                         visible: ctrl.filteredItems.length === 0 && !ctrl.isSearchingState
                         color: Theme.on_surface_variant
                         font {
-                            family: "Google Sans Medium"
+                            family: "Noto Color Emoji"
                             pixelSize: 18
                         }
+                        renderType: Text.QtRendering
                     }
 
                     // Outer Profile Trim

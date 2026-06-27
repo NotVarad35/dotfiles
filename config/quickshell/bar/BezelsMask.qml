@@ -55,7 +55,7 @@ Variants {
 
                 // Primary Drop Shadow for the bezel edges
                 layer.effect: MultiEffect {
-                    shadowEnabled: true
+                    shadowEnabled: false
                     shadowColor: "#B0000000"
                     shadowVerticalOffset: 0
                     shadowHorizontalOffset: 0

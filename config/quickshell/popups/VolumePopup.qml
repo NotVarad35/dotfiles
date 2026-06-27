@@ -94,14 +94,6 @@ Variants {
 
                 color: Theme.surface_container
 
-                layer.enabled: true
-                layer.effect: MultiEffect {
-                    shadowEnabled: true
-                    shadowBlur: 1.0
-                    shadowColor: "#40000000"
-                    shadowVerticalOffset: 6
-                }
-
                 Row {
                     anchors.fill: parent
                     anchors.leftMargin: 22

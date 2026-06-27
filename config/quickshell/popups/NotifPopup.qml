@@ -344,7 +344,7 @@ Variants {
                         layer.enabled: true
 
                         layer.effect: MultiEffect {
-                            shadowEnabled: true
+                            shadowEnabled: false
                             shadowColor: "#40000000"
                             blurMax: 32
                             shadowBlur: interactionArea.containsMouse ? 1.0 : 0.85

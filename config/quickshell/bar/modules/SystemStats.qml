@@ -1,4 +1,5 @@
 import QtQuick
+import Quickshell
 import Quickshell.Services.Pipewire
 import qs.theme
 
@@ -7,6 +8,8 @@ import qs.theme
  */
 Rectangle {
     id: root
+
+    required property var parentWindow
 
     // --- Layout Configuration ---
     implicitWidth: contentLayout.width + 30
@@ -31,10 +34,16 @@ Rectangle {
 
         // --- Mango Icon ---
         Image {
+            id: mangoIcon
             source: "../../mangowm.svg"
             sourceSize.width: 16
             sourceSize.height: 16
             anchors.verticalCenter: parent.verticalCenter
+
+            TapHandler {
+                cursorShape: Qt.PointingHandCursor
+                onTapped: powerMenu.visible = !powerMenu.visible
+            }
         }
 
         // --- Separator ---
@@ -87,6 +96,81 @@ Rectangle {
                 onTapped: if (root.activeSink?.audio)
                     root.activeSink.audio.muted = !root.isMuted
                 cursorShape: Qt.PointingHandCursor
+            }
+        }
+    }
+
+        PopupWindow {
+            id: powerMenu
+            grabFocus: true
+            anchor.window: root.parentWindow
+        anchor.rect.x: mangoIcon.x
+        anchor.rect.y: root.parentWindow.implicitHeight + 8
+        implicitWidth: 200
+        implicitHeight: powerColumn.height + 24
+        color: "transparent"
+
+        Rectangle {
+            anchors.fill: parent
+            color: Theme.surface_container_low
+            radius: 16
+            border.color: Theme.outline_variant
+            border.width: 1
+
+            Column {
+                id: powerColumn
+                anchors { left: parent.left; right: parent.right; top: parent.top; margins: 8 }
+                spacing: 4
+
+                Repeater {
+                    model: [
+                        { icon: "", label: "Lock", cmd: ["loginctl", "lock-session"] },
+                        { icon: "", label: "Suspend", cmd: ["systemctl", "suspend"] },
+                        { icon: "", label: "Hibernate", cmd: ["systemctl", "hibernate"] },
+                        { icon: "", label: "Log Out", cmd: ["bash", "-c", "loginctl terminate-user $(whoami)"] },
+                        { icon: "", label: "Reboot", cmd: ["systemctl", "reboot"] },
+                        { icon: "", label: "Shut Down", cmd: ["systemctl", "poweroff"] },
+                    ]
+
+                    delegate: Item {
+                        width: parent.width
+                        height: 36
+
+                        Rectangle {
+                            anchors.fill: parent
+                            radius: 10
+                            color: mouseArea.containsMouse ? Theme.surface_variant : "transparent"
+
+                            Row {
+                                anchors { left: parent.left; right: parent.right; verticalCenter: parent.verticalCenter; leftMargin: 12; rightMargin: 12 }
+                                spacing: 12
+
+                                Text {
+                                    text: modelData.icon
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    font { family: "JetBrainsMono Nerd Font"; pixelSize: 16 }
+                                    color: Theme.on_surface
+                                }
+
+                                Text {
+                                    text: modelData.label
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    font { family: "Google Sans Medium"; pixelSize: 14 }
+                                    color: Theme.on_surface
+                                }
+                            }
+
+                            TapHandler {
+                                id: mouseArea
+                                cursorShape: Qt.PointingHandCursor
+                                onTapped: {
+                                    powerMenu.visible = false
+                                    Quickshell.execDetached({ command: modelData.cmd })
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

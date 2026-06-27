@@ -143,7 +143,7 @@ PanelWindow {
                     anchors.fill: shadowCaster
                     source: shadowCaster
 
-                    shadowEnabled: true
+                    shadowEnabled: false
                     shadowBlur: 2.0
                     shadowColor: "#80000000"
                     shadowVerticalOffset: 12
