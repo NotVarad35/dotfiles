@@ -16,18 +16,10 @@
 - ☐ **Mode 2: mangowm** — floating WM (planned)
 
 ### Icon Themes
-- ☐ Choose and apply a colorful icon pack
-  - Papirus — already installed (`/usr/share/icons/Papirus`), switch from current Adwaita
-  - [Tela Circle](https://github.com/vinceliuice/Tela-circle-icon-theme) — flat colorful, `yay -S tela-circle-icon-theme`
-  - [Numix Circle](https://github.com/numixproject/numix-icon-theme-circle) — vibrant, `yay -S numix-circle-icon-theme-git`
-  - [Flat Remix](https://github.com/daniruiz/flat-remix) — material design, colorful
-  - [Win11-icon-theme](https://github.com/yeyushengfan258/Win11-icon-theme) — colorful, Windows 11 style
-  - [Fluent](https://github.com/vinceliuice/Fluent-icon-theme) — Microsoft Fluent Design style
-  - [WhiteSur](https://github.com/vinceliuice/WhiteSur-icon-theme) — macOS Big Sur style
-  - [Qogir](https://github.com/vinceliuice/Qogir-icon-theme) — flat colorful design
+- ✅ **Tela Circle** — installed and applied (active)
 
 ### Cursor
-- ◐ **Bog cursor pack** — converted to XCursor format at `~/.icons/Bog/`. WIP: animated cursors (Working in bg.ani, Busy.ani) not converted, needs to be set as active cursor theme in mangowm config
+- ✅ **Bog cursor pack** — converted & applied. Animated cursors (Working in bg.ani, Busy.ani) not converted — needs different tool
 
 ### Custom Themes
 - ☐ Build theme system (sunset orange, sea blue, green, dark)
