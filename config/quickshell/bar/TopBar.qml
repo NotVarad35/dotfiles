@@ -13,7 +13,7 @@ Variants {
         screen: modelData
 
         // --- Layer Shell Configuration ---
-        WlrLayershell.layer: WlrLayer.Overlay
+        WlrLayershell.layer: WlrLayer.Top
         WlrLayershell.namespace: "quickshell-topbar"
         visible: true
 
