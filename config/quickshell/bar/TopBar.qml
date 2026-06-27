@@ -45,6 +45,23 @@ Variants {
                 verticalCenter: parent.verticalCenter
             }
         }
+        NowPlaying {
+            id: nowPlayingModule
+            parentWindow: mainBar
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+            }
+        }
+        SinkSwitcher {
+            id: sinkModule
+            parentWindow: mainBar
+            anchors {
+                right: workspaceModule.left
+                rightMargin: 8
+                verticalCenter: parent.verticalCenter
+            }
+        }
         Workspaces {
             id: workspaceModule
             targetMonitor: modelData.name
