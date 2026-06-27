@@ -35,6 +35,8 @@ ShellRoot {
         id: topBar
     }
 
+    Component.onCompleted: FullscreenState.active = true
+
     // Floating notification overlay
     NotifPopup {
         id: notificationOverlay

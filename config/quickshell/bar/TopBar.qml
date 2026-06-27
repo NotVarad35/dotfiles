@@ -3,6 +3,7 @@ import Quickshell.Wayland
 import QtQuick
 import "modules"
 import qs.theme
+import qs.services
 
 Variants {
     id: root
@@ -13,9 +14,9 @@ Variants {
         screen: modelData
 
         // --- Layer Shell Configuration ---
-        WlrLayershell.layer: WlrLayer.Top
+        WlrLayershell.layer: WlrLayer.Overlay
         WlrLayershell.namespace: "quickshell-topbar"
-        visible: true
+        visible: !FullscreenState.isFullscreen
 
         // --- Geometry & Positioning ---
         anchors {
