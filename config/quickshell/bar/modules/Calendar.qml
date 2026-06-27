@@ -5,6 +5,7 @@ import qs.theme
 Item {
     id: root
 
+    property var parentWindow: null
     implicitWidth: timeLabel.implicitWidth + 32
     implicitHeight: timeLabel.implicitHeight + 16
 
