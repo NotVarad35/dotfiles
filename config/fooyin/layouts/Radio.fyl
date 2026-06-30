@@ -1,0 +1,132 @@
+{
+    "Name": "Radio",
+    "Options": {
+        "ApplyWindowSize": true
+    },
+    "Version": 1,
+    "Widgets": [
+        {
+            "SplitterVertical": {
+                "State": "AAAA/wAAAAEAAAACAAAFFgAAABYA/////wEAAAACAA==",
+                "Widgets": [
+                    {
+                        "SplitterHorizontal": {
+                            "State": "AAAA/wAAAAEAAAACAAAA1gAABRoA/////wEAAAABAA==",
+                            "Widgets": [
+                                {
+                                    "SplitterVertical": {
+                                        "State": "AAAA/wAAAAEAAAAFAAABugAAANUAAABWAAAAGgAAABcA/////wEAAAACAA==",
+                                        "Widgets": [
+                                            {
+                                                "RadioGuide": {
+                                                    "CollapsedSections": [
+                                                        "Countries",
+                                                        "Eras",
+                                                        "Genres",
+                                                        "More Genres",
+                                                        "Talk"
+                                                    ],
+                                                    "ShowScrollbar": true
+                                                }
+                                            },
+                                            {
+                                                "ArtworkPanel": {
+                                                    "CoverAlignment": 132,
+                                                    "CoverType": 0,
+                                                    "FadeCoverChanges": false,
+                                                    "FadeDurationMs": 1000,
+                                                    "KeepAspectRatio": true
+                                                }
+                                            },
+                                            {
+                                                "ScriptDisplay": {
+                                                    "BackgroundColour": "",
+                                                    "Font": "",
+                                                    "ForegroundColour": "",
+                                                    "HorizontalAlignment": 4,
+                                                    "LinkColour": "",
+                                                    "Script": "$if(%isstopped%,\n<b>Playback stopped</b>,\n<sized=1><b>$if2(%station%,$if(%streamtitle%,,%title%))</b></size>\n$crlf()\n$if2(%streamtitle%,[$join( - ,%artist%,%title%)])\n)",
+                                                    "ShowScrollbar": true,
+                                                    "VerticalAlignment": 128
+                                                }
+                                            },
+                                            {
+                                                "PlayerControls": {
+                                                    "ShowNext": false,
+                                                    "ShowPlayPause": true,
+                                                    "ShowPrevious": false,
+                                                    "ShowStop": true
+                                                }
+                                            },
+                                            {
+                                                "VolumeControls": {
+                                                    "Mode": 3
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "SplitterVertical": {
+                                        "State": "AAAA/wAAAAEAAAACAAAAHAAABOIA/////wEAAAACAA==",
+                                        "Widgets": [
+                                            {
+                                                "RadioSearch": {
+                                                    "BitrateFilterPinned": false,
+                                                    "CodecFilterPinned": false,
+                                                    "CountryFilterPinned": false,
+                                                    "GenreFilterPinned": false,
+                                                    "LanguageFilterPinned": false,
+                                                    "ShowFilterText": true,
+                                                    "TagFilterPinned": false
+                                                }
+                                            },
+                                            {
+                                                "RadioBrowser": {
+                                                    "AlternatingRows": true,
+                                                    "Captions": 2,
+                                                    "Display": 0,
+                                                    "DoubleClickAction": 5,
+                                                    "HideBroken": true,
+                                                    "ID": "032720477c3244df84b5ce157441528f",
+                                                    "IconHorizontalGap": -1,
+                                                    "IconItemBorder": 2,
+                                                    "IconSize": 36,
+                                                    "IconVerticalGap": 8,
+                                                    "MiddleClickAction": 0,
+                                                    "PlaybackOnSend": true,
+                                                    "RowHeight": 0,
+                                                    "SavedCaptions": 2,
+                                                    "SavedDisplay": 0,
+                                                    "SavedState": "",
+                                                    "SeparateSavedView": false,
+                                                    "ShowFilterBar": true,
+                                                    "ShowHeader": true,
+                                                    "ShowIcons": true,
+                                                    "ShowSavedIcons": true,
+                                                    "ShowScrollbar": true,
+                                                    "ShowToolTips": true,
+                                                    "State": "AAAAlXjaY2Bg4GBgYFzIwMCwmgEB8oA4CYnPAaUZgZgJiJmBmAWIWYGYDYjZQWrsH+zlvrCX+6L96Yk7pSfulLHftyPwdavcDvsjseKuF0ti7Q+ChKUn2u9v/CEPRPbrlWaYR37SsN8wOax/+YzbjFAL2ABR0iH0",
+                                                    "UniformIcons": true,
+                                                    "UseIconGapsForSideCaptions": true
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "StatusBar": {
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "WindowSize": {
+        "Height": 998,
+        "Width": 953
+    }
+}

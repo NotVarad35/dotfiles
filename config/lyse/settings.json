@@ -1,0 +1,24 @@
+{
+  "show_ui": true,
+  "lyrics_centered": true,
+  "bold_current": false,
+  "upper_current": true,
+  "double_current": false,
+  "standout": false,
+  "dim_inactive": false,
+  "offset": 0.0,
+  "colors": {
+    "current": 231,
+    "ahead_close": 252,
+    "ahead_mid": 249,
+    "ahead_far": 245,
+    "behind_close": 243,
+    "behind_mid": 239,
+    "behind_far": 237,
+    "bar_filled": 249,
+    "bar_empty": 243,
+    "title": 252,
+    "artist": 252,
+    "status": 252
+  }
+}

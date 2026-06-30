@@ -1,0 +1,13 @@
+#History lists
+
+[image_list]
+
+[shortcuts]
+"Home[path]/home/notvarad"
+"Desktop[path]/home/notvarad/Desktop"
+"Collections[path]/home/notvarad/.local/share/geeqie/collections"
+
+[path_list]
+"/home/notvarad"
+
+#end

@@ -1,0 +1,22 @@
+[Added Associations]
+video/mp4=mpv-3.desktop;mpv-2.desktop;
+image/jpeg=swayimg.desktop;swappy.desktop;satty.desktop;
+
+[Default Applications]
+video/mp4=mpv-video.desktop
+x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
+image/png=swayimg.desktop
+image/jpeg=swayimg.desktop
+image/gif=swayimg.desktop
+image/bmp=swayimg.desktop
+image/webp=swayimg.desktop
+image/tiff=swayimg.desktop
+image/avif=swayimg.desktop
+image/jxl=swayimg.desktop
+video/x-matroska=mpv-video.desktop
+video/webm=mpv-video.desktop
+video/ogg=mpv-video.desktop
+video/avi=mpv-video.desktop
+video/mpeg=mpv-video.desktop
+image/svg+xml=swayimg.desktop
+x-scheme-handler/obsidian=obsidian.desktop
