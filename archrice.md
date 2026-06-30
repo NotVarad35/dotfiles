@@ -60,10 +60,6 @@ keybind (which then gets imported to rofi) (GUI and
 CLI or maybe like omarchy)
 
 some customisation options
-gradient blur in taskbar (later known
-something else)
-gradient in dolphin file manager options like
-(https://www.youtube.com/watch?v=prG9xFkvlNg)
 pop up app drawer displaying all apps with a
 universal search bar
 example:
