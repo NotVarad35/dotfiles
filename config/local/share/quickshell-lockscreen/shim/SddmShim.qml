@@ -141,7 +141,7 @@ Item {
             var parts = line.split("|||");
             if (parts.length === 2 && parts[0] !== "" && parts[1] !== "") {
                 internalSessionModel.append({ name: parts[0], file: parts[1] });
-                
+
                 // Match current desktop
                 var fileName = parts[1].toLowerCase();
                 if (currentDesktop !== "" && (fileName.indexOf(currentDesktop) !== -1 || currentDesktop.indexOf(fileName.replace(".desktop", "")) !== -1)) {
@@ -164,6 +164,7 @@ Item {
         signal loginSucceeded()
 
         function login(user, password, sessionIndex) {
+            pam.abort();
             pam.user = user;
             pam.pendingPassword = password;
             pam.start();
@@ -178,9 +179,10 @@ Item {
         property string pendingPassword: ""
 
         onResponseRequiredChanged: {
-            if (responseRequired && pendingPassword !== "") {
-                respond(pendingPassword);
+            if (responseRequired) {
+                var pwd = pendingPassword;
                 pendingPassword = "";
+                respond(pwd);
             }
         }
 
