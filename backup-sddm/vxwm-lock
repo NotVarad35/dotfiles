@@ -1,6 +1,0 @@
-#!/bin/sh
-THEMES="pixel-dusk-city pixel-rainyroom"
-RANDOM_THEME=$(echo "$THEMES" | tr ' ' '\n' | shuf -n1)
-
-sudo sed -i "s/^Current=.*/Current=$RANDOM_THEME/" /etc/sddm.conf
-sudo sddm --lock

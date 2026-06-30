@@ -27,7 +27,7 @@
 - ☐ Gradient in dolphin file manager
 
 ### SDDM Login Page
-- ◐ **SDDM** — currently has `pixel-rainyroom` theme and basic config. Needs customisation
+- ✅ **SDDM** — 22 qylock themes installed, `random-sddm-theme.sh` randomizes on each lock
 
 ### Bootloader
 - ☐ Customise bootloader (GRUB theme)
@@ -63,6 +63,9 @@
 
 ### Alt-Tab
 - ☐ Customise alt-tab switcher
+
+### WiFi Password Input
+- ☐ **WiFi password dialog** — `NetworkPanel.qml` password TextField doesn't receive keyboard focus when dialog opens; keystrokes go to PopupWindow instead. Priority: not important
 
 ### Cava
 - ☐ Cava on desktop without terminal background
@@ -137,3 +140,35 @@
 - `~/.config/mango/config.conf` has fcitx5 env vars and XKB layout `us,jp` with `grp:lalt_lshift_toggle`
 - Power menu temp implementation in `SystemStats.qml:104` → `PopupWindow` with Suspend/Reboot/ShutDown
 - Japanese input via fcitx5-remote (`toggle-jp.sh`), no daemon needed
+
+
+
+
+
+
+
+themes :
+
+
+enfield
+field
+forest
+girl-pillow
+last-of-us
+man-bicycle
+material-you
+minecraft
+pixel-coffee
+pixel-cyberpunk
+pixel-dusk-city
+pixel-hollowknight
+pixel-munchlax
+pixel-night-city
+pixel-rainyroom
+pixel-sakura
+pixel-skyscrapers
+pixel-waterfall
+sword
+winter
+women-umbrella
+wuwa
