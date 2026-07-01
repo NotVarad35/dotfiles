@@ -29,6 +29,7 @@ import qs.Modules.Panels.SetupWizard
 import qs.Modules.Panels.SystemStats
 import qs.Modules.Panels.Tray
 import qs.Modules.Panels.Wallpaper
+import qs.Modules.Panels.WallpaperMaker
 import qs.Services.Compositor
 import qs.Services.Power
 import qs.Services.UI
@@ -364,6 +365,12 @@ PanelWindow {
     WallpaperPanel {
       id: wallpaperPanel
       objectName: "wallpaperPanel-" + (root.screen?.name || "unknown")
+      screen: root.screen
+    }
+
+    WallpaperMakerPanel {
+      id: wallpaperMakerPanel
+      objectName: "wallpaperMakerPanel-" + (root.screen?.name || "unknown")
       screen: root.screen
     }
 

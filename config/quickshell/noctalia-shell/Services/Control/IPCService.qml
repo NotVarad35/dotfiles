@@ -645,6 +645,16 @@ Singleton {
   }
 
   IpcHandler {
+    target: "wallpapermaker"
+    function toggle() {
+      root.screenDetector.withCurrentScreen(screen => {
+                                              var panel = PanelService.getPanel("wallpaperMakerPanel", screen);
+                                              panel?.toggle();
+                                            });
+    }
+  }
+
+  IpcHandler {
     target: "wifi"
     function toggle() {
       NetworkService.setWifiEnabled(!NetworkService.wifiEnabled);
