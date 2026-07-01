@@ -36,7 +36,7 @@
         "visualizerType": "linear",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
-        "volumeOverdrive": false,
+        "volumeOverdrive": true,
         "volumeStep": 5
     },
     "bar": {
@@ -184,7 +184,15 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
+                        "steam",
+                        "KDE Connect"
                     ]
+                },
+                {
+                    "id": "plugin:screen-toolkit"
+                },
+                {
+                    "id": "plugin:screen-recorder"
                 },
                 {
                     "hideWhenZero": false,
@@ -230,6 +238,12 @@
                         "removeMargins": false
                     },
                     "id": "plugin:privacy-indicator"
+                },
+                {
+                    "id": "plugin:mangowc-layout-switcher"
+                },
+                {
+                    "id": "plugin:slowbongo"
                 }
             ]
         }
@@ -514,7 +528,7 @@
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": ""
+        "wallpaperChange": "notify-send \"HELLO NIGGER\""
     },
     "idle": {
         "customCommands": "[]",
@@ -533,14 +547,14 @@
     "location": {
         "analogClockInCalendar": false,
         "autoLocate": false,
-        "firstDayOfWeek": -1,
+        "firstDayOfWeek": 0,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
         "name": "Pune",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
-        "use12hourFormat": false,
+        "use12hourFormat": true,
         "useFahrenheit": false,
         "weatherEnabled": true,
         "weatherShowEffects": true,

@@ -1,0 +1,11 @@
+{
+  "idleTimeout": 150,
+  "waitingTimeout": 30000,
+  "catColor": "none",
+  "catSize": 1.31,
+  "catOffsetY": 0.12,
+  "raveMode": true,
+  "tappyMode": true,
+  "useMprisFilter": false,
+  "inputDevices": []
+}

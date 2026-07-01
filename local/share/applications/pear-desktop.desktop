@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Better YT Music
+Comment=YouTube Music client
+Exec=/home/notvarad/.local/bin/pear-desktop.AppImage %U
+Type=Application
+Icon=pear-desktop
+Categories=Audio;Music;Player;
+NoDisplay=false

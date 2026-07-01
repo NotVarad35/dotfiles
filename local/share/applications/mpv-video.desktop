@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=MPV Video
+Exec=/usr/bin/mpv %f
+Type=Application
+MimeType=video/mp4;video/x-matroska;video/webm;video/ogg;video/avi;video/mpeg;video/quicktime;video/x-msvideo;video/x-flv;video/x-ms-wmv;
+NoDisplay=true

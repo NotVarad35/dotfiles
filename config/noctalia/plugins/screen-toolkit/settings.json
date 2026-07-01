@@ -1,0 +1,41 @@
+{
+  "colorHistory": [
+    "#1B1820"
+  ],
+  "paletteColors": [
+    "#1D1A21",
+    "#231D23",
+    "#2B2324",
+    "#5D585B",
+    "#827C7E",
+    "#A7A1A2",
+    "#E6E1E1"
+  ],
+  "installedLangs": [
+    "eng"
+  ],
+  "transAvailable": false,
+  "selectedOcrLang": "eng",
+  "screenshotPath": "",
+  "videoPath": "/home/notvarad/Videos/screenrecordings/",
+  "filenameFormat": "",
+  "detectedRecorder": "",
+  "recordSkipConfirmation": false,
+  "recordCopyToClipboard": true,
+  "gifMaxSeconds": 30,
+  "resultHex": "#1B1820",
+  "resultRgb": "rgb(27, 24, 32)",
+  "resultHsv": "hsv(263, 25%, 13%)",
+  "resultHsl": "hsl(263, 14%, 11%)",
+  "colorCapturePath": "/tmp/screen-toolkit-colorpicker.png",
+  "colorCacheBust": 1782878839853,
+  "ocrResult": "",
+  "ocrCapturePath": "",
+  "qrResult": "",
+  "qrCapturePath": "",
+  "translateResult": "",
+  "x02ApiKey": "",
+  "x02Expiry": "7d",
+  "shareSkipPopover": false,
+  "searchEngineUrl": ""
+}

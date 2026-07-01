@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Obsidian
+Comment=Obsidian note-taking app
+Exec=/home/notvarad/.local/bin/obsidian.AppImage %F
+Icon=obsidian
+Type=Application
+Categories=Office;NoteTaking;
+StartupWMClass=obsidian
+Terminal=false
+MimeType=x-scheme-handler/obsidian;text/markdown;
