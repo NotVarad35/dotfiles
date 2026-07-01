@@ -14,7 +14,7 @@
         "enableSessionSearch": true,
         "enableSettingsSearch": true,
         "enableWindowsSearch": true,
-        "iconMode": "tabler",
+        "iconMode": "native",
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
@@ -24,7 +24,7 @@
         "showCategories": false,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "alacritty -e",
+        "terminalCommand": "",
         "viewMode": "list"
     },
     "audio": {
@@ -283,7 +283,7 @@
                 "id": "audio-card"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "brightness-card"
             },
             {
@@ -518,7 +518,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": false,
+        "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 660,
@@ -592,12 +592,12 @@
             "normal": true
         },
         "sounds": {
-            "criticalSoundFile": "",
-            "enabled": false,
-            "excludedApps": "discord,firefox,chrome,chromium,edge",
-            "lowSoundFile": "",
-            "normalSoundFile": "",
-            "separateSounds": false,
+            "criticalSoundFile": "/home/notvarad/Downloads/spiderman-meme-song.mp3",
+            "enabled": true,
+            "excludedApps": "discord,firefox,chrome,chromium,edge,tauonmb,tauon",
+            "lowSoundFile": "/home/notvarad/Downloads/rizz-sound-effect.mp3",
+            "normalSoundFile": "/home/notvarad/Downloads/anime-girl-senpai.mp3",
+            "separateSounds": true,
             "volume": 0.5
         }
     },
