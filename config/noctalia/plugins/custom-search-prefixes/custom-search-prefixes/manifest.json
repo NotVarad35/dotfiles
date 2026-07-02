@@ -1,0 +1,39 @@
+{
+    "id": "custom-search-prefixes",
+    "name": "Custom Search Prefixes",
+    "version": "1.0.0",
+    "author": "NotVarad",
+    "license": "MIT",
+    "description": "Custom search prefixes for the launcher — type >yt, >gem, >red and more to search specific sites.",
+    "minNoctaliaVersion": "3.9.0",
+    "repository": "",
+    "tags": ["Launcher", "Utility"],
+    "entryPoints": {
+        "main": "Main.qml",
+        "launcherProvider": "LauncherProvider.qml",
+        "settings": "Settings.qml"
+    },
+    "dependencies": {
+        "plugins": []
+    },
+    "metadata": {
+        "defaultSettings": {
+            "prefixes": [
+                {
+                    "prefix": "yt",
+                    "name": "YouTube",
+                    "url": "https://www.youtube.com/results?search_query=",
+                    "icon": "brand-youtube",
+                    "enabled": true
+                },
+                {
+                    "prefix": "red",
+                    "name": "Reddit",
+                    "url": "https://www.reddit.com/search/?q=",
+                    "icon": "brand-reddit",
+                    "enabled": true
+                }
+            ]
+        }
+    }
+}

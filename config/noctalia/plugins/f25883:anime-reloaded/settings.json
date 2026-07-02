@@ -1,0 +1,12 @@
+{
+  "mode": "sub",
+  "preferredProvider": "auto",
+  "metadataProvider": "anilist",
+  "streamProvider": "allanime",
+  "librarySchemaVersion": 2,
+  "lastPanelTabIndex": 0,
+  "barWidgetIconName": "device-tv-filled",
+  "barWidgetText": "",
+  "barWidgetIconColor": "none",
+  "posterSize": "medium"
+}

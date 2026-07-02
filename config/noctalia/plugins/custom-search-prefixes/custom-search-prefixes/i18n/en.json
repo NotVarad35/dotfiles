@@ -1,0 +1,28 @@
+{
+    "settings": {
+        "prefixes": {
+            "label": "Search Prefixes",
+            "description": "Add, edit, or remove custom search prefixes. Type the prefix in the launcher followed by a space and your query.",
+            "add": "Add Prefix",
+            "addDialog": "Add New Prefix",
+            "editDialog": "Edit Prefix",
+            "prefixPlaceholder": "Prefix (e.g. yt)",
+            "namePlaceholder": "Display name (e.g. YouTube)",
+            "urlPlaceholder": "Search URL with = at the end (e.g. https://...?q=)",
+            "iconPlaceholder": "Tabler icon name (e.g. brand-youtube)",
+            "save": "Save",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "deleteConfirm": "Delete this prefix?",
+            "enabled": "Enabled"
+        }
+    },
+    "launcher": {
+        "search": "Search \"{query}\" on {site}",
+        "command": {
+            "description_singular": "Search on {site}",
+            "description": "Search on a specific site"
+        },
+        "noQuery": "Type a search query..."
+    }
+}
