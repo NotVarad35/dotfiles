@@ -20,12 +20,12 @@ Can add as Noctalia QML widgets 🔨
 - Gradient blur bar — modify bar background styling
 - Power menu (shutdown/reboot/hibernate) — improve existing
 Better as separate tools 🛠
-- Webapp maker — standalone script (generates .desktop files + mangowm keybinds)
+- Webapp maker — standalone script (generates .desktop files + mangowm keybinds), DONE
 - Custom bootloader — GRUB theme, outside shell
-- Fastfetch — config file only
+- Fastfetch — config file only kinda DONE
 - yt-dlp GUI — separate app
-- Phone integration — KDE Connect
-- Window mode switcher (tile/float) — mangowm layout toggle
+- Phone integration — KDE Connect, done expect phone screen to open in laptop.
+- Window mode switcher (tile/float) — mangowm layout toggle to vxwm.
 
 
 
