@@ -3,6 +3,7 @@ video/mp4=mpv-3.desktop;mpv-2.desktop;
 image/jpeg=swayimg.desktop;swappy.desktop;satty.desktop;
 text/plain=dev.noctalia.noctalia-qs.desktop;obsidian.desktop;
 application/x-msdownload=net.lutris.Lutris.desktop;
+text/markdown=org.kde.kwrite.desktop;
 
 [Default Applications]
 video/mp4=mpv-video.desktop
@@ -24,3 +25,7 @@ image/svg+xml=swayimg.desktop
 x-scheme-handler/obsidian=obsidian.desktop
 text/plain=obsidian.desktop
 application/x-msdownload=net.lutris.Lutris.desktop
+text/markdown=org.kde.kwrite.desktop
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
+x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
+application/x-bittorrent=freedownloadmanager_torrent.desktop

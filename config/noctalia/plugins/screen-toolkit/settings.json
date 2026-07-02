@@ -1,15 +1,17 @@
 {
   "colorHistory": [
+    "#100F11",
     "#1B1820"
   ],
   "paletteColors": [
-    "#1D1A21",
-    "#231D23",
-    "#2B2324",
-    "#5D585B",
-    "#827C7E",
-    "#A7A1A2",
-    "#E6E1E1"
+    "#130E12",
+    "#201829",
+    "#271831",
+    "#34224D",
+    "#513A62",
+    "#675094",
+    "#9664A0",
+    "#BBADC9"
   ],
   "installedLangs": [
     "eng"
@@ -19,16 +21,16 @@
   "screenshotPath": "",
   "videoPath": "/home/notvarad/Videos/screenrecordings/",
   "filenameFormat": "",
-  "detectedRecorder": "",
-  "recordSkipConfirmation": false,
+  "detectedRecorder": "wf-recorder",
+  "recordSkipConfirmation": true,
   "recordCopyToClipboard": true,
   "gifMaxSeconds": 30,
-  "resultHex": "#1B1820",
-  "resultRgb": "rgb(27, 24, 32)",
-  "resultHsv": "hsv(263, 25%, 13%)",
-  "resultHsl": "hsl(263, 14%, 11%)",
-  "colorCapturePath": "/tmp/screen-toolkit-colorpicker.png",
-  "colorCacheBust": 1782878839853,
+  "resultHex": "",
+  "resultRgb": "",
+  "resultHsv": "",
+  "resultHsl": "",
+  "colorCapturePath": "",
+  "colorCacheBust": 0,
   "ocrResult": "",
   "ocrCapturePath": "",
   "qrResult": "",

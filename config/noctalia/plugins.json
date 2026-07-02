@@ -4,10 +4,31 @@
             "enabled": true,
             "name": "Noctalia Plugins",
             "url": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        {
+            "enabled": true,
+            "name": "unofficial",
+            "url": "https://github.com/rukh-debug/noctalia-unofficial-plugins"
         }
     ],
     "states": {
-        "fancy-audiovisualizer": {
+        "custom-search-prefixes": {
+            "enabled": true,
+            "sourceUrl": "local"
+        },
+        "deskvis": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "f25883:anime-reloaded": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/rukh-debug/noctalia-unofficial-plugins"
+        },
+        "f25883:mangadex": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/rukh-debug/noctalia-unofficial-plugins"
+        },
+        "file-search": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
@@ -50,10 +71,6 @@
         "web-search": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
-        },
-        "custom-search-prefixes": {
-            "enabled": true,
-            "sourceUrl": "local"
         }
     },
     "version": 2

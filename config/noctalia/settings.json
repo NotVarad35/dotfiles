@@ -237,6 +237,12 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
+                },
+                {
+                    "id": "plugin:f25883:mangadex"
+                },
+                {
+                    "id": "plugin:f25883:anime-reloaded"
                 }
             ]
         }
@@ -357,56 +363,39 @@
                         "y": 80
                     },
                     {
-                        "colorName": "primary",
-                        "height": 72,
-                        "hideWhenIdle": false,
-                        "id": "AudioVisualizer",
-                        "roundedCorners": true,
-                        "scale": 1.5299102998052052,
-                        "showBackground": false,
-                        "visualizerType": "linear",
-                        "width": 320,
-                        "x": 940,
-                        "y": 960
-                    },
-                    {
-                        "colorName": "primary",
-                        "height": 72,
-                        "hideWhenIdle": false,
-                        "id": "AudioVisualizer",
-                        "roundedCorners": true,
-                        "scale": 1.5590194703974272,
-                        "showBackground": false,
-                        "visualizerType": "linear",
-                        "width": 320,
-                        "x": 460,
-                        "y": 960
-                    },
-                    {
-                        "colorName": "primary",
-                        "height": 72,
-                        "hideWhenIdle": false,
-                        "id": "AudioVisualizer",
-                        "roundedCorners": true,
-                        "scale": 1.5352835162060352,
-                        "showBackground": false,
-                        "visualizerType": "linear",
-                        "width": 320,
-                        "x": 1420,
-                        "y": 960
-                    },
-                    {
-                        "colorName": "primary",
-                        "height": 72,
-                        "hideWhenIdle": false,
-                        "id": "AudioVisualizer",
-                        "roundedCorners": true,
-                        "scale": 1.534859988706887,
-                        "showBackground": false,
-                        "visualizerType": "linear",
-                        "width": 320,
-                        "x": -20,
-                        "y": 960
+                        "barCount": 64,
+                        "customHeight": 550,
+                        "customPrimaryColor": "#6750a4",
+                        "customSecondaryColor": "#625b71",
+                        "customWidth": 1920,
+                        "defaultSettings": {
+                            "barCount": 32,
+                            "customHeight": 0,
+                            "customPrimaryColor": "#6750A4",
+                            "customSecondaryColor": "#625B71",
+                            "customWidth": 0,
+                            "direction": "up",
+                            "fadeWhenIdle": true,
+                            "fps": 60,
+                            "mode": "bars",
+                            "sensitivity": 1.5,
+                            "smoothing": 0.18,
+                            "useCustomColors": false,
+                            "useGradient": true
+                        },
+                        "direction": "up",
+                        "fadeWhenIdle": false,
+                        "fps": 60,
+                        "id": "plugin:deskvis",
+                        "mode": "bars",
+                        "scale": 1,
+                        "sensitivity": 2.4000000000000004,
+                        "showBackground": true,
+                        "smoothing": 0.24,
+                        "useCustomColors": false,
+                        "useGradient": true,
+                        "x": 0,
+                        "y": 520
                     }
                 ]
             }

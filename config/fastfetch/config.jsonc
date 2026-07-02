@@ -85,7 +85,7 @@
       "key": "disk",
       "keyColor": "cyan",
       "folders": [
-        "/"
+        "/home"
       ],
       "format": "{size-used} / {size-total}"
     },
