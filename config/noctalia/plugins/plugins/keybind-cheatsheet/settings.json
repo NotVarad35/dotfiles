@@ -1,0 +1,425 @@
+{
+  "cheatsheetData": [
+    {
+      "title": "Reload",
+      "binds": [
+        {
+          "keys": "Super + Shift + r",
+          "desc": "Reload config"
+        }
+      ]
+    },
+    {
+      "title": "Applications",
+      "binds": [
+        {
+          "keys": "Super + Q",
+          "desc": "Run: foot"
+        },
+        {
+          "keys": "Super + e",
+          "desc": "Run: thunar"
+        },
+        {
+          "keys": "Super + Shift + e",
+          "desc": "Run: pkill mango"
+        }
+      ]
+    },
+    {
+      "title": "Window Focus",
+      "binds": [
+        {
+          "keys": "Super + h",
+          "desc": "Focus LEFT"
+        },
+        {
+          "keys": "Super + l",
+          "desc": "Focus RIGHT"
+        },
+        {
+          "keys": "Super + k",
+          "desc": "Focus UP"
+        },
+        {
+          "keys": "Super + j",
+          "desc": "Focus DOWN"
+        }
+      ]
+    },
+    {
+      "title": "Window Swap",
+      "binds": [
+        {
+          "keys": "Super + Shift + k",
+          "desc": "Swap UP"
+        },
+        {
+          "keys": "Super + Shift + j",
+          "desc": "Swap DOWN"
+        },
+        {
+          "keys": "Super + Shift + h",
+          "desc": "Swap LEFT"
+        },
+        {
+          "keys": "Super + Shift + l",
+          "desc": "Swap RIGHT"
+        }
+      ]
+    },
+    {
+      "title": "Window State",
+      "binds": [
+        {
+          "keys": "Super + w",
+          "desc": "Close window"
+        },
+        {
+          "keys": "Super + g",
+          "desc": "Toggleglobal"
+        },
+        {
+          "keys": "Super + v",
+          "desc": "Toggle floating"
+        },
+        {
+          "keys": "Alt + a",
+          "desc": "Maximize"
+        },
+        {
+          "keys": "Super + f",
+          "desc": "Toggle fullscreen"
+        },
+        {
+          "keys": "Super + i",
+          "desc": "Minimized"
+        },
+        {
+          "keys": "Super + Shift + I",
+          "desc": "Restore Minimized"
+        }
+      ]
+    },
+    {
+      "title": "Window Move",
+      "binds": [
+        {
+          "keys": "Shift + Alt + Up",
+          "desc": "Movewin"
+        },
+        {
+          "keys": "Shift + Alt + Down",
+          "desc": "Movewin"
+        },
+        {
+          "keys": "Shift + Alt + Left",
+          "desc": "Movewin"
+        },
+        {
+          "keys": "Shift + Alt + Right",
+          "desc": "Movewin"
+        }
+      ]
+    },
+    {
+      "title": "Window Resize",
+      "binds": [
+        {
+          "keys": "Super + Alt + Up",
+          "desc": "Resizewin"
+        },
+        {
+          "keys": "Super + Alt + Down",
+          "desc": "Resizewin"
+        },
+        {
+          "keys": "Super + Alt + Left",
+          "desc": "Resizewin"
+        },
+        {
+          "keys": "Super + Alt + Right",
+          "desc": "Resizewin"
+        }
+      ]
+    },
+    {
+      "title": "Workspace",
+      "binds": [
+        {
+          "keys": "Super + Ctrl + Left",
+          "desc": "Viewtoleft"
+        },
+        {
+          "keys": "Super + Ctrl + Right",
+          "desc": "Viewtoright"
+        }
+      ]
+    },
+    {
+      "title": "Layout",
+      "binds": [
+        {
+          "keys": "Super + n",
+          "desc": "Switch layout"
+        }
+      ]
+    },
+    {
+      "title": "Tags (view)",
+      "binds": [
+        {
+          "keys": "Super + 1",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 2",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 3",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 4",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 5",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 6",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 7",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 8",
+          "desc": "View"
+        },
+        {
+          "keys": "Super + 9",
+          "desc": "View"
+        }
+      ]
+    },
+    {
+      "title": "Tags (move client)",
+      "binds": [
+        {
+          "keys": "Super + Shift + 1",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 2",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 3",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 4",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 5",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 6",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 7",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 8",
+          "desc": "Tag"
+        },
+        {
+          "keys": "Super + Shift + 9",
+          "desc": "Tag"
+        }
+      ]
+    },
+    {
+      "title": "Screenshot",
+      "binds": [
+        {
+          "keys": "PrtSc",
+          "desc": "Run: ~/.config/mango/scripts/screenshot.sh"
+        },
+        {
+          "keys": "Super + Shift + S",
+          "desc": "Run: ~/.config/mango/scripts/screenshot-annotate.sh"
+        },
+        {
+          "keys": "Super + Shift + V",
+          "desc": "Run: ~/.config/mango/scripts/clipboard.sh"
+        }
+      ]
+    },
+    {
+      "title": "volume and audio",
+      "binds": [
+        {
+          "keys": "Vol Up",
+          "desc": "Run: pactl set-sink-volume @DEFAULT_SINK@ +5%"
+        },
+        {
+          "keys": "Vol Down",
+          "desc": "Run: pactl set-sink-volume @DEFAULT_SINK@ -5%"
+        },
+        {
+          "keys": "Mute",
+          "desc": "Run: pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        },
+        {
+          "keys": "Mic Mute",
+          "desc": "Run: pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+        },
+        {
+          "keys": "F3",
+          "desc": "Run: pactl set-sink-volume @DEFAULT_SINK@ +5%"
+        },
+        {
+          "keys": "F2",
+          "desc": "Run: pactl set-sink-volume @DEFAULT_SINK@ -5%"
+        },
+        {
+          "keys": "F1",
+          "desc": "Run: pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        },
+        {
+          "keys": "F4",
+          "desc": "Run: pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+        }
+      ]
+    },
+    {
+      "title": "brightness",
+      "binds": [
+        {
+          "keys": "Bright Up",
+          "desc": "Run: brightnessctl set +10%"
+        },
+        {
+          "keys": "Bright Down",
+          "desc": "Run: brightnessctl set 10%-"
+        }
+      ]
+    },
+    {
+      "title": "bind=SUPER+SHIFT,P,spawn,quickshell ipc call emojiMenu toggle",
+      "binds": [
+        {
+          "keys": "Super + Shift + W",
+          "desc": "Wallpaper Panel"
+        },
+        {
+          "keys": "Super + Shift + M",
+          "desc": "wallpapermaker: toggle"
+        }
+      ]
+    },
+    {
+      "title": "noctalia-shell quickshell bindings",
+      "binds": [
+        {
+          "keys": "Super + b",
+          "desc": "Run: firefox"
+        },
+        {
+          "keys": "Super + Space",
+          "desc": "Launcher"
+        },
+        {
+          "keys": "Super + s",
+          "desc": "Control Center"
+        },
+        {
+          "keys": "Super + ,",
+          "desc": "Settings"
+        },
+        {
+          "keys": "Vol Up",
+          "desc": "Volume Up"
+        },
+        {
+          "keys": "Vol Down",
+          "desc": "Volume Down"
+        },
+        {
+          "keys": "Mute",
+          "desc": "Mute Output"
+        },
+        {
+          "keys": "Bright Up",
+          "desc": "Brightness Up"
+        },
+        {
+          "keys": "Bright Down",
+          "desc": "Brightness Down"
+        },
+        {
+          "keys": "Super + Alt + l",
+          "desc": "Lock Screen"
+        }
+      ]
+    },
+    {
+      "title": "mouse bindings",
+      "binds": [
+        {
+          "keys": "Super + Left Click",
+          "desc": "Moveresize"
+        },
+        {
+          "keys": "Super + Right Click",
+          "desc": "Moveresize"
+        }
+      ]
+    }
+  ],
+  "detectedCompositor": "mango",
+  "windowWidth": 1400,
+  "windowHeight": 850,
+  "autoHeight": true,
+  "columnCount": 3,
+  "modKeyVariable": "$mod",
+  "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+  "hyprlandLuaConfigPath": "~/.config/hypr/hyprland.lua",
+  "hyprlandParserMode": "auto",
+  "niriConfigPath": "~/.config/niri/config.kdl",
+  "mangoConfigPath": "~/.config/mango/config.conf",
+  "mergeSequentialBinds": true,
+  "showUndescribedBinds": true,
+  "splitLargeWorkspaceCategory": true,
+  "workspaceSplitThreshold": 12,
+  "keyColorAlt": "#FF6B6B",
+  "keyColorXF86": "#4ECDC4",
+  "keyColorPrint": "#95E1D3",
+  "keyColorNumeric": "#A8DADC",
+  "keyColorMouse": "#F38181",
+  "keyColorSuper": "",
+  "keyColorCtrl": "",
+  "keyColorShift": "",
+  "keyColorDefault": "#6C757D",
+  "keyLabelColor": "#FFFFFF",
+  "keyTextSuper": "",
+  "keyTextCtrl": "",
+  "keyTextShift": "",
+  "keyTextAlt": "",
+  "keyTextXF86": "",
+  "keyTextPrint": "",
+  "keyTextNumeric": "",
+  "keyTextMouse": "",
+  "keyTextDefault": "",
+  "descriptionTextColor": "",
+  "bindOverrides": {}
+}

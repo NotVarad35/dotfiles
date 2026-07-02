@@ -1,6 +1,8 @@
 [Added Associations]
 video/mp4=mpv-3.desktop;mpv-2.desktop;
 image/jpeg=swayimg.desktop;swappy.desktop;satty.desktop;
+text/plain=dev.noctalia.noctalia-qs.desktop;obsidian.desktop;
+application/x-msdownload=net.lutris.Lutris.desktop;
 
 [Default Applications]
 video/mp4=mpv-video.desktop
@@ -20,3 +22,5 @@ video/avi=mpv-video.desktop
 video/mpeg=mpv-video.desktop
 image/svg+xml=swayimg.desktop
 x-scheme-handler/obsidian=obsidian.desktop
+text/plain=obsidian.desktop
+application/x-msdownload=net.lutris.Lutris.desktop

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+NEW_WALL="${1:-}"
+COLORS_JSON="$HOME/.config/quickshell/theme/colors.json"
+
+if [[ -z "$NEW_WALL" || ! -f "$NEW_WALL" ]]; then
+    echo "Usage: $0 <path-to-wallpaper>" >&2
+    exit 1
+fi
+
+# Kill existing wallpaper setter
+pkill swaybg 2>/dev/null || true
+
+# Set new wallpaper with swaybg
+swaybg -i "$NEW_WALL" -m fill &
+
+# Update wallpaper_path in colors.json
+python3 -c "
+import json, os
+path = os.path.expanduser('$COLORS_JSON')
+with open(path) as f:
+    data = json.load(f)
+data['wallpaper_path'] = '$NEW_WALL'
+with open(path, 'w') as f:
+    json.dump(data, f, indent=2)
+    f.write('\n')
+"
