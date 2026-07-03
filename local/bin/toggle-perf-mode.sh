@@ -1,47 +1,106 @@
-#My MangoWM config
+#!/bin/bash
+# Toggle Ultra Performance Mode
+# Usage: toggle-perf-mode.sh [on|off]
+#   on    - Enter performance mode
+#   off   - Leave performance mode
+#   (none) - Auto-detect (checks if config.conf.normal exists)
 
+MODE="${1:-auto}"
+CONFIG_DIR="$HOME/.config/mango"
+NORMAL="$CONFIG_DIR/config.conf.normal"
+PERF="$CONFIG_DIR/config-performance.conf"
+ACTIVE="$CONFIG_DIR/config.conf"
+WALL="$HOME/Pictures/walls/wallhaven-3q9qky.png"
+SETTINGS="$HOME/.config/noctalia/settings.json"
 
-#################################################################################### 
+# Auto-detect mode
+if [ "$MODE" = "auto" ]; then
+  if [ -f "$NORMAL" ]; then
+    MODE="off"
+  else
+    MODE="on"
+  fi
+fi
+
+# === LEAVE PERFORMANCE MODE ===
+if [ "$MODE" = "off" ]; then
+  if [ ! -f "$NORMAL" ]; then
+    notify-send "Performance mode" "Not in performance mode"
+    exit 0
+  fi
+
+  # Restore config
+  cp "$NORMAL" "$ACTIVE"
+  rm "$NORMAL"
+
+  # Restore wallpaper color extraction if it was on before
+  if [ -f /tmp/perf-mode-colorscheme ]; then
+    PREV=$(cat /tmp/perf-mode-colorscheme)
+    if [ "$PREV" = "true" ]; then
+      sed -i 's/"useWallpaperColors": false/"useWallpaperColors": true/' "$SETTINGS"
+    fi
+    rm /tmp/perf-mode-colorscheme
+  fi
+
+  # Restart Noctalia
+  qs -c noctalia-shell &
+
+  # Kill perf mode services
+  pkill swaybg mako nm-applet 2>/dev/null
+
+  # Reload mangowm
+  sleep 0.5
+  killall -USR1 mango 2>/dev/null
+
+  notify-send "Performance mode" "OFF — restored"
+
+# === ENTER PERFORMANCE MODE ===
+elif [ "$MODE" = "on" ]; then
+  if [ -f "$NORMAL" ]; then
+    notify-send "Performance mode" "Already in performance mode"
+    exit 0
+  fi
+
+  # Save current config as normal backup
+  cp "$ACTIVE" "$NORMAL"
+
+  # Create perf config if needed
+  if [ ! -f "$PERF" ]; then
+    cat > "$PERF" << 'PERFEOF'
+#My MangoWM config - Performance Mode (minimal)
+
+####################################################################################
 # Startup + env
 ####################################################################################
 
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec-once = qs -c noctalia-shell
-#exec-once = swayosd-server
-exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
-exec-once=/usr/lib/xdg-desktop-portal-wlr
-exec-once=fcitx5 -d
-exec-once=ydotoold
-exec-once=kdeconnect-indicator
-
-
+exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
+exec-once = /usr/lib/xdg-desktop-portal-wlr
+exec-once = fcitx5 -d
+exec-once = swaybg -i /home/notvarad/Pictures/walls/wallhaven-3q9qky.png
+exec-once = mako
+exec-once = nm-applet
 
 env = XCURSOR_THEME,Bogpackwin
 env = XCURSOR_SIZE,24
-env = QS_ICON_THEME,Papirus
-env=GTK_IM_MODULE,fcitx
-env=QT_IM_MODULE,fcitx
-env=QT_IM_MODULES,wayland;fcitx
-env=SDL_IM_MODULE,fcitx
-env=XMODIFIERS,@im=fcitx
+env = GTK_IM_MODULE,fcitx
+env = QT_IM_MODULE,fcitx
+env = QT_IM_MODULES,wayland;fcitx
+env = SDL_IM_MODULE,fcitx
+env = XMODIFIERS,@im=fcitx
 env = QT_QPA_PLATFORMTHEME,qt6ct
 
-################################################################################### 
+###################################################################################
 #General Appearance
 ###################################################################################
 
-# Border
 border_radius=20
 no_radius_when_single=0
 no_border_when_single=0
 borderpx=1
-focused_opacity=0.9
-unfocused_opacity=0.85
+focused_opacity=1
+unfocused_opacity=1
 
-
-#border colouts
-
-#Gaps
 gappih=10
 gappiv=15
 gappoh=15
@@ -52,47 +111,14 @@ scratchpad_height_ratio=0.9
 #Blur
 blur=0
 
-
 #Shadows
 shadows=0
-layer_shadows=5
-shadow_only_floating=1
-shadows_size=10
-shadows_blur=15
-shadows_position_x=0
-shadows_position_y=0
-
 
 #animations
-animations=1
-layer_animations=1
-animation_type_open=slide
-animation_type_close=slide
-animation_fade_in=1
-animation_fade_out=1
-tag_animation_direction=1
-zoom_initial_ratio=0.3
-zoom_end_ratio=0.8
-fadein_begin_opacity=0.5
-fadeout_begin_opacity=0.8
-
-animation_duration_move=430
-animation_duration_open=430
-animation_duration_tag=430
-animation_duration_close=430
-animation_duration_focus=0
-
-animation_curve_open=0.2,0.8,0.2,1
-animation_curve_move=0.2,0.8,0.2,1
-animation_curve_tag=0.2,0.8,0.2,1
-animation_curve_close=0.2,0.8,0.2,1
-animation_curve_focus=0.2,0.8,0.2,1
-animation_curve_opafadeout=0.2,0.8,0.2,1
-animation_curve_opafadein=0.2,0.8,0.2,1
-
+animations=0
 
 ###################################################################################
-# Layouts and whatnot
+# Layouts
 ###################################################################################
 
 tagrule=id:1,layout_name:tile
@@ -105,7 +131,6 @@ tagrule=id:7,layout_name:tile
 tagrule=id:8,layout_name:tile
 tagrule=id:9,layout_name:tile
 
-#Scroller
 scroller_structs=20
 scroller_default_proportion=0.5
 scroller_focus_center=0
@@ -114,13 +139,11 @@ edge_scroller_pointer_focus=1
 scroller_default_proportion_single=1.0
 scroller_proportion_preset=0.5,0.8,1.0
 
-#Master Stack
 new_is_master=0
 default_mfact=0.5
 default_nmaster=0
 smartgaps=0
 
-#Overview
 hotarea_size=10
 enable_hotarea=1
 ov_tab_mode=0
@@ -131,15 +154,12 @@ overviewgappo=30
 # peripherals
 ###################################################################################
 
-# keyboard
 repeat_rate=50
 repeat_delay=225
 numlockon=0
 xkb_rules_layout=us,jp
 xkb_rules_options=grp:lalt_lshift_toggle
 
-
-# trackpad
 disable_trackpad=0
 tap_to_click=1
 tap_and_drag=1
@@ -150,10 +170,7 @@ left_handed=0
 middle_button_emulation=0
 swipe_min_threshold=1
 
-
-# mouse
 mouse_natural_scrolling=0
-
 
 ####################################################################################
 # Misc
@@ -172,16 +189,18 @@ drag_tile_to_tile=1
 axis_bind_apply_timeout=100
 
 ####################################################################################
-# keybinds and whatnot
+# keybinds
 ###################################################################################
 
-# Reload 
 bind=SUPER+SHIFT,r,reload_config
 
 # Applications
 bind=SUPER,Q,spawn,foot
 bind=SUPER,e,spawn,thunar
 bind=SUPER+SHIFT,e,spawn,pkill mango
+bind=SUPER,space,spawn,walker -t noctalia
+bind=SUPER,b,spawn,firefox
+
 # Window Focus
 bind=SUPER,h,focusdir,left
 bind=SUPER,l,focusdir,right
@@ -249,7 +268,6 @@ bind=NONE,Print,spawn,~/.config/mango/scripts/screenshot.sh
 bind=SUPER+SHIFT,S,spawn,~/.config/mango/scripts/screenshot-annotate.sh
 bind=SUPER+SHIFT,V,spawn,~/.config/mango/scripts/clipboard.sh
 
-
 # volume and audio
 bind=NONE,XF86AudioRaiseVolume,spawn,pactl set-sink-volume @DEFAULT_SINK@ +5%
 bind=NONE,XF86AudioLowerVolume,spawn,pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -260,51 +278,36 @@ bind=NONE,F2,spawn,pactl set-sink-volume @DEFAULT_SINK@ -5%
 bind=NONE,F1,spawn,pactl set-sink-mute @DEFAULT_SINK@ toggle
 bind=NONE,F4,spawn,pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-
 # brightness
 bind=NONE,XF86MonBrightnessUp,spawn,brightnessctl set +10%
 bind=NONE,XF86MonBrightnessDown,spawn,brightnessctl set 10%-
 
-# Quickshell utilities
-#bind=SUPER+SHIFT,C,spawn,quickshell ipc call clipMenu toggle
-#bind=SUPER+SHIFT,P,spawn,quickshell ipc call emojiMenu toggle
-bind=SUPER+SHIFT,W,spawn,qs -c noctalia-shell ipc call wallpaper toggle
-bind=SUPER+SHIFT,M,spawn,qs -c noctalia-shell ipc call wallpapermaker toggle
-
-#noctalia-shell quickshell bindings
-
-bind=SUPER,b,spawn,firefox
-bind=SUPER,space,spawn,walker -t noctalia
-bind=SUPER,s,spawn,qs -c noctalia-shell ipc call controlCenter toggle
-bind=SUPER,comma,spawn,qs -c noctalia-shell ipc call settings toggle
-bind=NONE,XF86AudioRaiseVolume,spawn,qs -c noctalia-shell ipc call volume increase
-bind=NONE,XF86AudioLowerVolume,spawn,qs -c noctalia-shell ipc call volume decrease
-bind=NONE,XF86AudioMute,spawn,qs -c noctalia-shell ipc call volume muteOutput
-bind=NONE,XF86MonBrightnessUp,spawn,qs -c noctalia-shell ipc call brightness increase
-bind=NONE,XF86MonBrightnessDown,spawn,qs -c noctalia-shell ipc call brightness decrease
-bind=SUPER+ALT,l,spawn,qs -c noctalia-shell ipc call lockScreen lock
-
-
+# Lock screen
+bind=SUPER+ALT,l,spawn,~/.local/bin/lock.sh
 
 # mouse bindings
 mousebind=SUPER,btn_left,moveresize,curmove
 mousebind=SUPER,btn_right,moveresize,curresize
+PERFEOF
+  fi
 
+  # Save wallpaper color extraction state
+  if grep -q '"useWallpaperColors": true' "$SETTINGS" 2>/dev/null; then
+    echo "true" > /tmp/perf-mode-colorscheme
+    sed -i 's/"useWallpaperColors": true/"useWallpaperColors": false/' "$SETTINGS"
+  else
+    echo "false" > /tmp/perf-mode-colorscheme
+  fi
 
-##############################################################################
-# window/layerrules
-###############################################################################
+  # Apply perf config
+  cp "$PERF" "$ACTIVE"
 
-layerrule=animation_type_open:zoom,layer_name:wofi
-layerrule=animation_type_close:zoom,layer_name:wofi
+  # Kill Noctalia
+  killall -9 qs 2>/dev/null
 
-windowrule=isfloating:1,appid:nm-connection-editor
-windowrule=isfloating:1,appid:blueman-manager
-windowrule=isfloating:1,appid:pavucontrol
+  # Reload mangowm
+  sleep 0.3
+  killall -USR1 mango 2>/dev/null
 
-
-# This sources the noctalia theme
-
-source = /home/notvarad/.config/mango/noctalia.conf
-
-
+  notify-send "Performance mode" "ON — resources freed"
+fi

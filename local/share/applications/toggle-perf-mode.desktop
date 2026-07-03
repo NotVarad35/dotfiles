@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Performance Mode
+Comment=Toggle between normal and performance mode
+Exec=/home/notvarad/.local/bin/toggle-perf-mode.sh
+Icon=preferences-system-performance
+Type=Application
+Categories=Utility;

@@ -21,6 +21,7 @@ Singleton {
                            "WiFi": networkComponent,
                            "Network": networkComponent,
                            "NoctaliaPerformance": noctaliaPerformanceComponent,
+                           "UltraPerformance": ultraPerformanceComponent,
                            "WallpaperSelector": wallpaperSelectorComponent
                          })
 
@@ -72,6 +73,9 @@ Singleton {
   }
   property Component wallpaperSelectorComponent: Component {
     WallpaperSelector {}
+  }
+  property Component ultraPerformanceComponent: Component {
+    UltraPerformance {}
   }
 
   function init() {

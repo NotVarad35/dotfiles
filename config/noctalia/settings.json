@@ -122,16 +122,6 @@
             ],
             "left": [
                 {
-                    "colorizeSystemIcon": "primary",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": true,
-                    "icon": "bolt-filled",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
-                },
-                {
                     "clockColor": "none",
                     "customFont": "Minecraft",
                     "formatHorizontal": "HH:mm AP ddd , MMM dd",
@@ -237,12 +227,6 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
-                },
-                {
-                    "id": "plugin:f25883:mangadex"
-                },
-                {
-                    "id": "plugin:f25883:anime-reloaded"
                 }
             ]
         }
@@ -308,7 +292,7 @@
                 "id": "media-sysmon-card"
             }
         ],
-        "diskPath": "/",
+        "diskPath": "/home",
         "position": "close_to_bar_button",
         "shortcuts": {
             "left": [
@@ -323,6 +307,9 @@
                 },
                 {
                     "id": "NoctaliaPerformance"
+                },
+                {
+                    "id": "UltraPerformance"
                 }
             ],
             "right": [
@@ -350,6 +337,45 @@
                 "name": "eDP-1",
                 "widgets": [
                     {
+                        "colorName": "primary",
+                        "height": 130,
+                        "hideWhenIdle": false,
+                        "id": "AudioVisualizer",
+                        "roundedCorners": true,
+                        "scale": 1.5775441949253874,
+                        "showBackground": false,
+                        "visualizerType": "linear",
+                        "width": 320,
+                        "x": -20,
+                        "y": 860
+                    },
+                    {
+                        "colorName": "primary",
+                        "height": 130,
+                        "hideWhenIdle": false,
+                        "id": "AudioVisualizer",
+                        "roundedCorners": true,
+                        "scale": 1.5770838389480526,
+                        "showBackground": false,
+                        "visualizerType": "linear",
+                        "width": 320,
+                        "x": 460,
+                        "y": 860
+                    },
+                    {
+                        "colorName": "primary",
+                        "height": 130,
+                        "hideWhenIdle": false,
+                        "id": "AudioVisualizer",
+                        "roundedCorners": true,
+                        "scale": 1.5773968810126402,
+                        "showBackground": false,
+                        "visualizerType": "linear",
+                        "width": 320,
+                        "x": 1420,
+                        "y": 860
+                    },
+                    {
                         "hideMode": "hidden",
                         "id": "MediaPlayer",
                         "roundedCorners": false,
@@ -363,39 +389,17 @@
                         "y": 80
                     },
                     {
-                        "barCount": 64,
-                        "customHeight": 550,
-                        "customPrimaryColor": "#6750a4",
-                        "customSecondaryColor": "#625b71",
-                        "customWidth": 1920,
-                        "defaultSettings": {
-                            "barCount": 32,
-                            "customHeight": 0,
-                            "customPrimaryColor": "#6750A4",
-                            "customSecondaryColor": "#625B71",
-                            "customWidth": 0,
-                            "direction": "up",
-                            "fadeWhenIdle": true,
-                            "fps": 60,
-                            "mode": "bars",
-                            "sensitivity": 1.5,
-                            "smoothing": 0.18,
-                            "useCustomColors": false,
-                            "useGradient": true
-                        },
-                        "direction": "up",
-                        "fadeWhenIdle": false,
-                        "fps": 60,
-                        "id": "plugin:deskvis",
-                        "mode": "bars",
-                        "scale": 1,
-                        "sensitivity": 2.4000000000000004,
-                        "showBackground": true,
-                        "smoothing": 0.24,
-                        "useCustomColors": false,
-                        "useGradient": true,
-                        "x": 0,
-                        "y": 520
+                        "colorName": "primary",
+                        "height": 130,
+                        "hideWhenIdle": false,
+                        "id": "AudioVisualizer",
+                        "roundedCorners": true,
+                        "scale": 1.5902684341389266,
+                        "showBackground": false,
+                        "visualizerType": "linear",
+                        "width": 320,
+                        "x": 940,
+                        "y": 860
                     }
                 ]
             }
@@ -718,10 +722,6 @@
             },
             {
                 "enabled": true,
-                "id": "discord"
-            },
-            {
-                "enabled": true,
                 "id": "foot"
             },
             {
@@ -734,10 +734,6 @@
             },
             {
                 "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
                 "id": "kcolorscheme"
             },
             {
@@ -746,14 +742,26 @@
             },
             {
                 "enabled": true,
+                "id": "kitty"
+            },
+            {
+                "enabled": true,
                 "id": "code"
             },
             {
                 "enabled": true,
-                "id": "kitty"
+                "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "discord"
+            },
+            {
+                "enabled": true,
+                "id": "walker"
             }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -777,7 +785,7 @@
         "favorites": [
         ],
         "fillColor": "#000000",
-        "fillMode": "crop",
+        "fillMode": "fit",
         "hideWallpaperFilenames": false,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
@@ -805,7 +813,7 @@
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "single",
+        "viewMode": "browse",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
