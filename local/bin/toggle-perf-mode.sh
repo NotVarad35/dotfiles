@@ -45,6 +45,14 @@ if [ "$MODE" = "off" ]; then
   # Restart Noctalia
   qs -c noctalia-shell &
 
+  # Block mako dbus auto-activation so Noctalia's notifications take over
+  mkdir -p "$HOME/.local/share/dbus-1/services"
+  cat > "$HOME/.local/share/dbus-1/services/fr.emersion.mako.service" << 'EOF'
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=/bin/true
+EOF
+
   # Kill perf mode services
   pkill swaybg mako nm-applet 2>/dev/null
 
@@ -301,6 +309,9 @@ PERFEOF
 
   # Apply perf config
   cp "$PERF" "$ACTIVE"
+
+  # Restore mako dbus auto-activation (remove local override)
+  rm -f "$HOME/.local/share/dbus-1/services/fr.emersion.mako.service"
 
   # Kill Noctalia
   killall -9 qs 2>/dev/null

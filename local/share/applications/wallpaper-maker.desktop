@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wallpaper Maker
+Comment=Save images to wallpapers folder
+Exec=/home/notvarad/.local/bin/wallpaper-maker.sh
+Icon=wallpaper-maker
+Type=Application
+Categories=Utility;
