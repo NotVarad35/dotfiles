@@ -52,7 +52,7 @@ A fully riced Arch Linux desktop with **Noctalia shell**, **MangoWM** tiling com
 | 🔐 Display Manager | [SDDM](https://github.com/sddm/sddm) |
 | 📝 Input Method | [fcitx5](https://fcitx-im.org) + [Mozc](https://github.com/google/mozc) |
 | 🎨 Icon Theme | [Tela-circle](https://github.com/vinceliuice/Tela-circle-icon-theme) |
-| 🖱️ Cursor | Bog |
+| 🖱️ Cursor | Bog |[Bog Cursor Pack](https://www.youtube.com/watch?v=eErHc2D6C0o)
 | 📱 Phone Integration | [KDE Connect](https://kde.org/applications/org.kde.kdeconnect) |
 | 📸 Screenshots | grim + slurp |
 | 📋 Clipboard | cliphist + wl-paste |
@@ -299,24 +299,16 @@ This rice would not be possible without these amazing projects:
 | [Walker](https://github.com/abenz1267/walker) | abenz1267 | Fast app launcher |
 | [SDDM](https://github.com/sddm/sddm) | SDDM Project | Display manager |
 | [Tela Circle Icons](https://github.com/vinceliuice/Tela-circle-icon-theme) | vinceliuice | Icon theme |
-| [Bog Cursor](https://github.com/varlesh/bog-cursor) | varlesh | Cursor theme |
-| [Arch Linux](https://archlinux.org) | Arch Community | The best distro |
 
 ### Inspirations
 
-- [lyne-dots](https://github.com/caioax/lyne-dots) — QuickShell bar structure
-- [nxtdots](https://github.com/nxtkofi/nxtdots) — pywal theming approach
-- [ArchEclipse](https://github.com/beingsuz/ArchEclipse) — performance mode concept
-- [riceverse](https://github.com/vatsalj17/riceverse) — modular dotfile structure
-
+- [octashell](https://github.com/octagonemusic/octashell)
+- [unixporn sub-reddit](http://reddit.com/r/unixporn)
 ---
 
-## ⚠️ Use My Work? Give Credit
+## 💛 Built Something With This?
 
-If you've used, forked, or built upon this rice — **please give credit**. A simple mention or link back is enough.
-
-> **Used this work without credit?** [Open an issue](https://github.com/NotVarad35/dotfiles/issues/new?title=Missing%20credit%20for%20NotVarad%27s%20Noctalia%20Rice) and I'll sort it out. No drama — just drop a link. 🤝
-
+- If this rice inspired your setup, I'd love to see it! A link back helps others find the original too. If something's not credited properly, feel free to [open an issue](https://github.com/NotVarad35/dotfiles/issues/new?title=Missing%20credit%20for%20NotVarad%27s%20Noctalia%20Rice). 
 ---
 
 <div align="center">
