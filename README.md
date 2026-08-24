@@ -30,7 +30,6 @@ A fully riced Arch Linux desktop with **Noctalia shell**, **MangoWM** tiling com
 - 🔒 **Lock Screen** — random SDDM theme selection on every lock
 - 🎭 **Dynamic Theming** — sunset / sea / green / dark themes via Noctalia ThemingService
 - 📱 **KDE Connect** — phone integration (calls, notifications, file share)
-- 🇯🇵 **Japanese Input** — fcitx5 + Mozc with Super key toggle
 - 📋 **Clipboard History** — powered by cliphist + Noctalia clipboard widget
 - 🔍 **App Launcher** — fuzzy search, categories, usage tracking, and prefix commands (`>clip`, `>emoji`, `>cmd`, `>settings`)
 - 🎵 **Media Integration** — MPRIS now-playing, volume/brightness OSD
@@ -50,7 +49,6 @@ A fully riced Arch Linux desktop with **Noctalia shell**, **MangoWM** tiling com
 | 📊 System Monitor | [btop](https://github.com/aristocratos/btop) |
 | 🎬 Media Player | [mpv](https://mpv.io) |
 | 🔐 Display Manager | [SDDM](https://github.com/sddm/sddm) |
-| 📝 Input Method | [fcitx5](https://fcitx-im.org) + [Mozc](https://github.com/google/mozc) |
 | 🎨 Icon Theme | [Tela-circle](https://github.com/vinceliuice/Tela-circle-icon-theme) |
 | 🖱️ Cursor | Bog |[Bog Cursor Pack](https://www.youtube.com/watch?v=eErHc2D6C0o)
 | 📱 Phone Integration | [KDE Connect](https://kde.org/applications/org.kde.kdeconnect) |
