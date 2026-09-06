@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌙 NotVarad's Noctalia based Rice
+# 🌙 NotVarad's Noctalia V4 based Rice
 
 **Arch Linux dotfiles — Noctalia shell + MangoWM + Quickshell**
 
@@ -12,11 +12,7 @@
 
 ---
 
-A fully riced Arch Linux desktop with **Noctalia shell**, **MangoWM** tiling compositor, **22 randomized SDDM themes**, performance mode toggle, and dynamic wallpaper tools.
-
-<!-- TODO: Add your screenshot or GIF here -->
-<!-- ![Preview](screenshot.png) -->
-
+A fully riced Arch Linux desktop with **Noctalia shell**, **MangoWM** tiling compositor, **22 randomized SDDM themes**, performance mode toggle, and dynamic wallpaper tools. Since Noctalia V4 is out of development, this rice wont work on Noctalia V5 since its rewritten in C++.   
 </div>
 
 ---
